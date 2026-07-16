@@ -258,7 +258,7 @@ SQL is used to perform all these database operations efficiently.
 
 # 1️⃣4️⃣ 🧠 Interview Explanation (30–60 Seconds)
 
-> "SQL stands for Structured Query Language. It is the standard language used to communicate with relational databases. Using SQL, we can create databases and tables, insert data, retrieve data, update existing records, and delete records. SQL is widely used in applications like banking, e-commerce, healthcare, and social media because it provides an efficient and reliable way to manage structured data."
+> "SQL stands for Structured Query Language. It is a standard language used to communicate with relational databases. Using SQL, we can create databases and tables, insert, retrieve, update, and delete data, define relationships between tables, and manage user permissions. It is supported by databases such as PostgreSQL, MySQL, Oracle, SQL Server, and SQLite. SQL is widely used in applications like banking, e-commerce, healthcare, and social media because it provides an efficient and reliable way to manage structured data."
 
 ---
 
