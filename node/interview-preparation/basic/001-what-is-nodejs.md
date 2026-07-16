@@ -378,19 +378,115 @@ Learn these next:
 
 ---
 
-# 2️⃣0️⃣ 🔁 Revision Summary
+# 2️⃣0️⃣ 🔁 Revision Summary (One-Minute Revision)
 
-In one minute, you should be able to answer:
+### ✅ What is it?
 
-- ✅ What is it?
-- ✅ Why is it needed?
-- ✅ Where is it used?
-- ✅ How does it work?
-- ✅ Syntax
-- ✅ Example
-- ✅ Advantages
-- ✅ Limitations
-- ✅ Comparison
-- ✅ Best Practices
-- ✅ Common Mistakes
-- ✅ Interview Answer
+Node.js is an open-source JavaScript runtime that lets you run JavaScript outside the browser, mainly for backend development.
+
+---
+
+### ✅ Why is it needed?
+
+It allows developers to build server-side applications using JavaScript and efficiently handle many concurrent requests.
+
+---
+
+### ✅ Where is it used?
+
+- REST APIs
+- Real-time chat apps
+- Streaming services
+- Microservices
+- Authentication systems
+
+---
+
+### ✅ How does it work?
+
+```
+Request
+   ↓
+Event Loop
+   ↓
+libuv handles I/O
+   ↓
+Callback/Promise
+   ↓
+Response
+```
+
+---
+
+### ✅ Syntax
+
+```javascript
+console.log("Hello Node.js");
+```
+
+---
+
+### ✅ Example
+
+```javascript
+const http = require("http");
+
+http
+  .createServer((req, res) => {
+    res.end("Hello Node.js");
+  })
+  .listen(3000);
+```
+
+---
+
+### ✅ Advantages
+
+- Fast (V8 Engine)
+- Non-blocking I/O
+- Uses JavaScript everywhere
+- Great for scalable applications
+- Huge npm ecosystem
+
+---
+
+### ✅ Limitations
+
+- Not suitable for CPU-intensive tasks
+- Single main thread
+- Event loop can be blocked by heavy computations
+
+---
+
+### ✅ Comparison
+
+| Node.js                    | Traditional Backend        |
+| -------------------------- | -------------------------- |
+| Non-blocking               | Mostly blocking            |
+| Single-threaded event loop | Multi-threaded             |
+| Best for I/O tasks         | Better for CPU-heavy tasks |
+
+---
+
+### ✅ Best Practices
+
+- Use async/await
+- Handle errors properly
+- Validate user input
+- Keep code modular
+- Store secrets in environment variables
+
+---
+
+### ✅ Common Mistakes
+
+- Blocking the event loop
+- Ignoring error handling
+- Hardcoding secrets
+- Not handling Promise rejections
+
+---
+
+### ✅ Interview Answer
+
+> "Node.js is an open-source JavaScript runtime built on Google's V8 Engine. It allows JavaScript to run outside the browser and uses an event-driven, non-blocking I/O model to efficiently handle many concurrent requests. It is widely used for building scalable backend applications, REST APIs, and real-time services."
