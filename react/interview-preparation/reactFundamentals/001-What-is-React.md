@@ -340,19 +340,84 @@ Learn these next:
 
 ---
 
-# 2️⃣0️⃣ 🔁 Revision Summary
+## 🔁 Revision Summary
 
-In one minute, you should be able to answer:
+✅ **What is it?**
 
-- ✅ What is React?
-- ✅ Why is it needed?
-- ✅ Where is it used?
-- ✅ How does it work?
-- ✅ Basic syntax
-- ✅ Component example
-- ✅ Advantages
-- ✅ Limitations
-- ✅ React vs Plain JavaScript
-- ✅ Best practices
-- ✅ Common mistakes
-- ✅ Interview answer
+React is a JavaScript library used to build fast, interactive, and reusable user interfaces using components.
+
+---
+
+✅ **Why is it needed?**
+
+It simplifies UI development by breaking the interface into reusable components and updating only the changed parts of the page.
+
+---
+
+✅ **Where is it used?**
+
+It is used to build Single Page Applications (SPAs), dashboards, e-commerce websites, admin panels, and social media applications.
+
+---
+
+✅ **How does it work?**
+
+React creates a Virtual DOM, compares it with the previous Virtual DOM, finds the differences, and updates only the changed parts of the Real DOM.
+
+---
+
+✅ **Syntax**
+
+```jsx
+function App() {
+  return <h1>Hello React!</h1>;
+}
+```
+
+---
+
+✅ **Example**
+
+```jsx
+function Welcome() {
+  return <h1>Welcome to React</h1>;
+}
+```
+
+---
+
+✅ **Advantages**
+
+Reusable components, faster rendering with Virtual DOM, easier maintenance, and a large ecosystem.
+
+---
+
+✅ **Limitations**
+
+Handles only the UI layer, requires additional libraries for routing and state management, and has a learning curve for beginners.
+
+---
+
+✅ **Comparison**
+
+React = Builds UI using reusable components.
+
+Plain JavaScript = Requires manual DOM manipulation.
+
+---
+
+✅ **Interview Answer**
+
+React is an open-source JavaScript library for building user interfaces. It uses reusable components and a Virtual DOM to efficiently update only the changed parts of the webpage, making applications fast, scalable, and easy to maintain.
+
+---
+
+✅ **Common Mistakes**
+
+Avoid mutating state directly, creating overly large components, and using array indexes as keys unless necessary.
+
+---
+
+✅ **Real-world Usage**
+
+Used by Facebook, Instagram, Netflix, Airbnb, Uber, WhatsApp Web, and many other modern web applications.
