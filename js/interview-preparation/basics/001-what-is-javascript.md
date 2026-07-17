@@ -60,9 +60,15 @@ document.getElementById("btn").addEventListener("click", () => {
 
 ## 🎤 Interview Answer (30 Seconds)
 
-JavaScript is a **high-level, interpreted, dynamically typed programming language** used to make websites interactive. It adds behavior to web pages, such as button clicks, form validation, animations, and dynamic content. While HTML provides the structure and CSS provides the styling, JavaScript makes the webpage interactive. Today, it is also used for backend development with Node.js.
+JavaScript is a **high-level, interpreted, dynamically typed programming language** used to make web pages interactive by adding **behavior** and **logic**. It handles user interactions such as **button clicks, form validation, animations, and fetching dynamic content without reloading the webpage**.
 
----
+A web page is built using **three technologies**:
+
+- **HTML** → Provides the **structure**
+- **CSS** → Provides the **styling**
+- **JavaScript** → Provides the **interactivity**
+
+## In the modern world, JavaScript is also used for **backend development** using **Node.js**.
 
 ## 🧠 Memory Trick
 
