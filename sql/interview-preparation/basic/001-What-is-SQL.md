@@ -53,7 +53,7 @@ This query returns employees whose salary is greater than 50,000.
 
 ## 🎤 Interview Answer (30 Seconds)
 
-SQL stands for Structured Query Language. It is the standard language used to communicate with relational databases. Using SQL, we can create tables, insert data, retrieve data, update records, and delete records. It is widely used in applications like banking, e-commerce, healthcare, and social media for managing structured data efficiently.
+SQL stands for Structured Query Language. It is a standard language used to communicate with relational databases. Using SQL, we can create databases and tables, insert, retrieve, update, and delete data, define relationships between tables, and manage user permissions. It is supported by databases such as PostgreSQL, MySQL, Oracle, SQL Server, and SQLite.
 
 ---
 
