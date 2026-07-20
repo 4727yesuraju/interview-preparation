@@ -61,6 +61,9 @@ The above commands are **SQL**. They are executed by **MySQL**.
 
 SQL stands for **Structured Query Language**. It is the standard language used to create, retrieve, update, and delete data in relational databases. MySQL is a **Relational Database Management System (RDBMS)** that stores and manages data. We write SQL queries, and MySQL executes those queries. In short, **SQL is the language, and MySQL is the database software.**
 
+or
+SQL is the language, MySQL is the database management system (RDBMS), and MySQL can manage multiple databases. We use SQL commands to interact with those databases through MySQL.
+
 ---
 
 ## 🧠 Memory Trick
