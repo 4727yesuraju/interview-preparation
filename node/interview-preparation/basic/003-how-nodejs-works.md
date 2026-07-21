@@ -88,6 +88,10 @@ File Read Completed
 
 > "Node.js works using an Event Loop and a non-blocking I/O architecture. When a request arrives, Node.js executes fast tasks immediately. If the task is slow, such as a database query or file read, it delegates it to libuv and continues processing other requests. Once the operation completes, the Event Loop executes the callback or Promise and sends the response. This makes Node.js highly efficient for handling many concurrent requests."
 
+> "A Thread Pool is a set of worker threads managed by libuv. When Node.js encounters a slow blocking operation like file reading, encryption, compression, or some DNS operations, it hands the task to the Thread Pool instead of blocking the Event Loop. Once the task completes, libuv places the callback in the Callback Queue, and the Event Loop executes it when the Call Stack becomes empty. This allows Node.js to handle many requests efficiently without blocking."
+
+> "When Node.js gets a slow task like reading a file or querying a database, it gives the task to libuv instead of waiting. libuv uses the operating system or its thread pool to complete the task. After the task finishes, libuv places the callback into the Callback Queue. The Event Loop is always checking this queue. When the Call Stack is empty, it moves the callback to the Call Stack, executes it, and sends the response. This is how Node.js can handle many requests without blocking."
+
 ---
 
 ## 🧠 Memory Trick
