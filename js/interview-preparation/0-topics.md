@@ -110,7 +110,7 @@
 - [ ] 72. Synchronous vs asynchronous programming?
 - [ ] 73. What is the Event Loop?
 - [ ] 74. What is the Call Stack?
-- [ ] 75. What is the Callback Queue?
+- [ ] 75. What is the Callback Queue? (types-of-callback-queues.md)
 - [ ] 76. What are Promises?
 - [ ] 77. Promise states.
 - [ ] 78. Promise chaining.
