@@ -28,7 +28,6 @@
 - Types of components (Functional vs Class)
 - What is a Functional Component?
 - What is a Class Component?
-- Difference between Functional and Class Components
 - Component Composition
 - Reusable Components
 
