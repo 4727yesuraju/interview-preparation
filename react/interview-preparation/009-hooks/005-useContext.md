@@ -1,41 +1,34 @@
-# useEffect
+# useContext
 
 ## 📖 Simple English Explanation
 
 ### **What is it?**
 
-`useEffect` is a **React Hook** that lets you **perform side effects** in a Functional Component.
+`useContext` is a **React Hook** that allows a component to **access shared data from a Context** without passing props through every intermediate component.
 
-A **side effect** is any operation that happens outside of rendering the UI, such as:
-
-- Fetching data from an API
-- Setting a timer
-- Adding event listeners
-- Updating the document title
+It helps different components share the same data easily.
 
 ### **Why do we need it?**
 
-- To fetch data from APIs.
-- To perform actions after a component renders.
-- To set up timers or intervals.
-- To add and remove event listeners.
-- To synchronize the component with external systems.
+- To avoid **Prop Drilling**.
+- To share common data across multiple components.
+- To make the code cleaner and easier to maintain.
+- To provide global data like user information, theme, or language.
 
 ---
 
 ## 🌊 Flow
 
 ```text
-Component Renders
-        ↓
-useEffect Runs
-        ↓
-Perform Side Effect
-(API Call, Timer, Event Listener, etc.)
-        ↓
-State Updates (Optional)
-        ↓
-React Re-renders (if state changes)
+Create Context
+      ↓
+Provide Value using Context.Provider
+      ↓
+Child Component
+      ↓
+useContext()
+      ↓
+Access Shared Data
 ```
 
 ---
@@ -43,14 +36,22 @@ React Re-renders (if state changes)
 ## ✍️ Syntax
 
 ```jsx
-import { useEffect } from "react";
+import { createContext, useContext } from "react";
+
+const UserContext = createContext();
+
+function Child() {
+  const user = useContext(UserContext);
+
+  return <h2>{user}</h2>;
+}
 
 function App() {
-  useEffect(() => {
-    console.log("Component Rendered");
-  }, []);
-
-  return <h1>Hello React</h1>;
+  return (
+    <UserContext.Provider value="Yesu">
+      <Child />
+    </UserContext.Provider>
+  );
 }
 ```
 
@@ -59,21 +60,21 @@ function App() {
 ## 💻 Example
 
 ```jsx
-import { useEffect, useState } from "react";
+import { createContext, useContext } from "react";
+
+const ThemeContext = createContext();
+
+function Header() {
+  const theme = useContext(ThemeContext);
+
+  return <h2>Theme: {theme}</h2>;
+}
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    document.title = `Count: ${count}`;
-  }, [count]);
-
   return (
-    <>
-      <h2>{count}</h2>
-
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </>
+    <ThemeContext.Provider value="Dark">
+      <Header />
+    </ThemeContext.Provider>
   );
 }
 ```
@@ -81,38 +82,31 @@ function App() {
 **Output:**
 
 ```text
-Initial:
-Count: 0
-Browser Tab Title:
-Count: 0
-
-Click Increment
-
-Count: 1
-Browser Tab Title:
-Count: 1
+Theme: Dark
 ```
 
 ---
 
 ## 🎤 Interview Explanation
 
-`useEffect` is a React Hook used to perform **side effects** in Functional Components. It runs after the component renders and is commonly used for API calls, timers, event listeners, and updating the document title. The **dependency array** controls when the effect runs. An empty array (`[]`) runs the effect only once after the initial render, while specifying dependencies runs the effect whenever those values change.
+`useContext` is a React Hook used to **consume data from a Context**. It allows components to access shared data directly without passing props through multiple levels of components, a problem known as **Prop Drilling**. It is commonly used for global data such as authenticated users, themes, language preferences, and application settings.
 
 ---
 
 ## 🧠 Memory Trick
 
-⚡ **Think of `useEffect` as an Electric Switch.**
+📢 **Think of Context as a Loudspeaker.**
 
-- 🏠 Component = House
-- ⚡ `useEffect` = Switch
-- 💡 After the house is built (rendered), turn on the electricity (side effects).
+- 📢 Context = Loudspeaker
+- 👨‍👩‍👧‍👦 Components = People in a building
+- Everyone can hear the same announcement without someone passing the message room by room.
 
 ```text
-Component Renders
-        ↓
-useEffect
-        ↓
-Run Side Effect
+Context
+   ↓
+Provider
+   ↓
+useContext()
+   ↓
+All Required Components Get Data
 ```
